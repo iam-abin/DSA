@@ -1,3 +1,5 @@
+// check whether number of 1's and 0's are equal
+
 function isEqual(arr) {
     let stack = [];
 
