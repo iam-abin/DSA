@@ -61,37 +61,16 @@ class Stack {
 }
 
 
-class Queue {
-    constructor() {
-        this.stack1 = new Stack()
-        this.stack2 = new Stack()
-    }
-
-    enqueue(data) {
-        this.stack1.push(data);
-    }
-
-    dequeue() {
-        let temp = this.stack1.top;
-        while (temp) {
-            this.stack2.push(this.stack1.pop())
-            temp = temp.next;
-        }
-        this.stack2.pop()
-        return JSON.stringify(this.stack2)
-
-    }
-
-}
-
-let q = new Queue();
-q.enqueue(10)
-q.enqueue(20)
-q.enqueue(30)
-q.enqueue(40)
-q.enqueue(50)
-console.log(q.dequeue());
-console.log(q.dequeue());
-console.log(q.dequeue());
+const stack = new Stack();
+stack.push(10)
+stack.push(20)
+stack.push(30)
+stack.display()
+console.log(stack.size);
+console.log("--------");
+stack.pop()
+stack.pop()
+stack.pop()
+stack.peek()
 
 
