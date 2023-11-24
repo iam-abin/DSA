@@ -37,6 +37,10 @@ class Stack {
     }
 
     peek() {
+        if(!this.top){
+            console.log("stack underFlow");
+            return 
+        }
         console.log(this.top.data);
         return;
     }

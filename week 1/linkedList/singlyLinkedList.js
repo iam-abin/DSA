@@ -123,29 +123,32 @@ class LinkedList {
 
 
     delete(data) {
-        let temp = this.head;
-        let prev = null;
-        if (temp != null && temp.data == data) {
-            this.head = this.head.next;
-            return;
-        }
-        while (temp != null && temp.data != data) {
-            prev = temp;
-            temp = temp.next;
-        }
-        if (temp == null) {
-            console.log("Data not found ");
-            return;
-        }
+		let temp = this.head;
+		let prev = null;
 
-        if (temp == this.tail) {
-            prev.next = null;
-            this.tail = prev;
-            return;
-        }
+		while (temp != null && temp.data != data) {
+			prev = temp;
+			temp = temp.next;
+		}
 
-        prev.next = temp.next;
-    }
+		if (temp == null) {
+			console.log("value not found");
+			return;
+		}
+
+		if (temp == this.head) {
+			this.head = this.head.next;
+			return;
+		}
+
+		if (temp == this.tail) {
+			this.tail = prev;
+			this.tail.next = null
+			return;
+		}
+
+		prev.next = temp.next;
+	}
 
 
     search(data) {
@@ -170,10 +173,6 @@ class LinkedList {
 
 
     toArray() {
-        if (!this.head) {
-            return [];
-        }
-
         let arr = []
         let temp = this.head;
         while (temp != null) {
