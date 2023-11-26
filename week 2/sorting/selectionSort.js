@@ -1,12 +1,12 @@
 function selectionSort(arr) {
     for (let i = 0; i < arr.length; i++) {
-        let min = i
+        let minIndex = i
         for (let j = i + 1; j < arr.length; j++) {
             if (arr[i] > arr[j]) {
-                min = j
+                minIndex = j
             }
         }
-        [arr[i], arr[min]] = [arr[min], arr[i]];
+        [arr[i], arr[minIndex]] = [arr[minIndex], arr[i]];
     }
     return arr;
 }
