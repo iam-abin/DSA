@@ -1,8 +1,14 @@
-let arr=[10,20,30,40,50]
+const deleteFrom = (arr, pos) => {
+	if (pos < 1 || pos > arr.length) {
+		return `position should be between 1 and ${arr.length}`;
+	}
 
-let pos=2;
-for(let i=pos;i<arr.length-1;i++){
-    arr[i]=arr[i+1];
-}
-arr.length--;
-console.log(arr);
+	for (let i = pos; i < arr.length; i++) {
+		arr[i] = arr[i + 1];
+	}
+	arr.length--;
+	return arr;
+};
+
+let arr = [10, 20, 30, 40, 50];
+console.log(deleteFrom(arr, 5));

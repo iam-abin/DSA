@@ -1,11 +1,14 @@
-let arr=[10,20,30,40]
-console.log(arr.length);
-let value=1000;
-let pos=1;
-for(let i=arr.length-1;i>=pos;i--){
-    arr[i+1]=arr[i]
-}
+const insertAt = (arr, pos, data) => {
+	if (pos < 0 || pos > arr.length) {
+		return `position should be between 1 and ${arr.length}`;
+	}
 
-arr[pos]=value;
+	for (let i = arr.length - 1; i >= pos; i--) {
+		arr[i + 1] = arr[i];
+	}
+	arr[pos] = data;
+	return arr;
+};
 
-console.log(arr);
+let arr = [10, 20, 30, 40, 50];
+console.log(insertAt(arr, 6, 1000));
