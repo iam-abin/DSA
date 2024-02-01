@@ -21,7 +21,7 @@ class BinarySearchTree {
         }
     }
 
-    _insertNode(currentNode, newNode) {
+    _insertNode(currentNode, newNode) {  // currentNode will be a tree or subtree
         if (newNode.data < currentNode.data) {
             if (currentNode.left == null) {
                 currentNode.left = newNode;
@@ -157,17 +157,17 @@ class BinarySearchTree {
     }
 
     closest(target) {
-        let current = this.root;
-        let closest = current.data;
-        while (current != null) {
-            if (Math.abs(target - closest) > Math.abs(target - current.data)) {
-                closest = current.data;
+        let currentNode = this.root;
+        let closest = currentNode.data;
+        while (currentNode != null) {
+            if ( Math.abs(target - currentNode.data) < Math.abs(target - closest) ) {
+                closest = currentNode.data;
             }
 
-            if (target < current.data) {
-                current = current.left
-            } else if (target > current.data) {
-                current = current.right
+            if (target < currentNode.data) {
+                currentNode = currentNode.left
+            } else if (target > currentNode.data) {
+                currentNode = currentNode.right
             } else {
                 break;
             }
@@ -182,4 +182,4 @@ t.insert(8)
 t.insert(11)
 t.insert(4)
 t.insert(9)
-console.log(t.closest(5));
+console.log(t.closest(8));

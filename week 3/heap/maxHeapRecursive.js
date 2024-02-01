@@ -1,3 +1,6 @@
+// bubbleUp is also called heapifyUp
+// bubbleDown is also called heapifyDown
+
 class MaxHeap{
     constructor(){
         this.heap=[]

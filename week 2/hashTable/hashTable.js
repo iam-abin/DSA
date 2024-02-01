@@ -3,15 +3,6 @@ class HashTable {
         this.table = new Array(size);
     }
 
-    _hash(key) {
-        let hash = 0;
-        for (let i = 0; i < key.length; i++) {
-            hash += key.charCodeAt(i);
-        }
-
-        return hash % this.table.length;
-    }
-
     display() {
         console.log(this.table);
     }
@@ -29,7 +20,15 @@ class HashTable {
             }
         }
         this.table[index].push([key, value]);
+    }
 
+    _hash(key) {
+        let hash = 0;
+        for (let i = 0; i < key.length; i++) {
+            hash += key.charCodeAt(i);
+        }
+
+        return hash % this.table.length;
     }
 
     get(key) {
