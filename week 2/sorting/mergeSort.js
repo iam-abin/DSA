@@ -52,3 +52,14 @@ function merge(arr1, arr2) {
 
 let arr = [5, 3, 2, 1, 8, 6]
 console.log(mergeSort(arr));
+
+
+// Algorithm
+
+// 1. Start.
+// 2. Take an unsorted array as input.
+// 3. FInd the mid and divide the list into 2 halves using the mid.
+// 4. Recursively apply 3 for each halves, until subarrays has only one element.
+// 5. Merge the subarrays together by comparing elements from each list and insert into a new list in sorted order.
+// 5. Once all subarrays is merged the entire list is sorted.
+// 6. End.
