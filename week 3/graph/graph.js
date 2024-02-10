@@ -94,8 +94,6 @@ g.addEdge(3, 4);
 g.addEdge(4, 6);
 
 g.display()
-
-
 g.bfs(0)
-
+console.log("------------");
 g.dfs(0)

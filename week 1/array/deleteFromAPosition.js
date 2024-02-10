@@ -4,7 +4,7 @@ const deleteFrom = (arr, pos) => {
 	}
 
 	for (let i = pos; i < arr.length; i++) {
-		arr[i] = arr[i + 1];
+		arr[i-1] = arr[i];
 	}
 	arr.length--;
 	return arr;
