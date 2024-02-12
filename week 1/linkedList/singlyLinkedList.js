@@ -1,3 +1,5 @@
+// prefix tree
+
 class Node {
 	constructor(data) {
 		this.data = data;
@@ -187,25 +189,25 @@ class LinkedList {
 		return decimal;
 	}
 
-    reverse() {
-        let current = this.head;
-        let prev = null;
-        let next = null;
+	reverse() {
+		let current = this.head;
+		let prev = null;
+		let next = null;
 
-        while (current !== null) {
-            next = current.next; // Save the next node
-            current.next = prev;  // Reverse the link
+		while (current !== null) {
+			next = current.next; // Save the next node
+			current.next = prev; // Reverse the link
 
-            // Move one step forward in the list
-            prev = current;
-            current = next;
-        }
+			// Move one step forward in the list
+			prev = current;
+			current = next;
+		}
 
-        // Swap head and tail after the reversal
-        let temp = this.head;
-        this.head = this.tail;
-        this.tail = temp;
-    }
+		// Swap head and tail after the reversal
+		let temp = this.head;
+		this.head = this.tail;
+		this.tail = temp;
+	}
 
 	sort() {
 		if (this.head.next === null) {
@@ -269,5 +271,5 @@ list.addNode(7);
 list.sort();
 list.display();
 console.log("-------");
-list.reverse()
+list.reverse();
 list.display();

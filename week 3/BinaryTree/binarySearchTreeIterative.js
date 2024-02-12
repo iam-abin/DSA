@@ -82,7 +82,7 @@ class Tree {
                             this.root = currentNode.left;
                         }
 
-                    } else {                          //confusion
+                    } else {                          // very confusing are
                         if (parentNode.left == currentNode) {
                             if (currentNode.left == null) {
                                 parentNode.left = currentNode.right;
