@@ -21,9 +21,7 @@ console.log(selectionSort(arr));
 
 // 1. Start.
 // 2. Take an unsorted array as input.
-// 3. Set MIN to location 0.
-// 4. Search the minimum element in the list.
-// 5. Swap with value at location MIN.
-// 6. Increment MIN to point to next element.
-// 7. Repeat until the list is sorted.
-// 8. End.
+// 3. Find the minimum element from the unsorted array and swap it with first element of the unsorted subarray.
+// 4. Now first element is in its sorted position. and the remaining elements are in unsorted array
+// 5. Apply step 3 for the unsorted subarray until all elements are become sorted
+// 6. End.
