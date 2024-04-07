@@ -1,6 +1,6 @@
 let arr = [1,2,4,3,2,5,4,0,6]
 
-let num = 3
+let num = 10
 const set = new Set();
 for(let i=0;i<arr.length;i++){
     if(set.has(num-arr[i])){
