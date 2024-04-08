@@ -24,6 +24,11 @@ function partition(arr, left, right) {
 
 
 let arr = [5, 3, 2, 1, 8, 6]
+//  [5, 3, 2, 1, 6][8]
+//  [5, 3, 2, 1][6][8]
+//  [1, 3, 2, 5][6][8]
+//  [1][2,3][5][6][8]
+
 console.log(quickSort(arr));
 
 
