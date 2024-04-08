@@ -12,14 +12,15 @@ class HashTable {
 		if (!this.table[index]) {
 			this.table[index] = [];
 		} else {
-			for (let i = 0; i < this.table[index].length; i++) { // Separate Chaining for collision resolution
+			// Separate Chaining for collision resolution
+			for (let i = 0; i < this.table[index].length; i++) {
 				if (this.table[index][i][0] == key) {
 					this.table[index][i][1] = value;
 					return;
 				}
 			}
 		}
-		this.table[index].push([key, value]);
+		this.table[index].push([key, value]); 
 	}
 
 	_hash(key) {
