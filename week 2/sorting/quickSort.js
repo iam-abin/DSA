@@ -14,19 +14,20 @@ function partition(arr, left, right) {
 		if (arr[j] < pivot) {
 			[arr[i], arr[j]] = [arr[j], arr[i]];
 			i++;
+			console.log(arr);
 		}
+
 	}
 	[arr[i], arr[right]] = [arr[right], arr[i]];
 	return i;
 }
 
 let arr = [5, 3, 2, 1, 8, 6];
-//  [5, 3, 2, 1, 6][8]
-//  [5, 3, 2, 1][6][8]
-//  [1][3, 2, 5][6][8]
-//  [1][2,3][5][6][8]
-//  [1][2][3][5][6][8]
-
+//        [5, 3, 2, 1] [6]	[8]
+//     [1]	[3, 2, 5]	 [6]  [8]
+//  [1]   [3,2]     [5]	   [6]	[8]
+//[1]   [2]   [3]     [5]	 [6]  [8]
+ 
 console.log(quickSort(arr));
 
 // Algorithm
